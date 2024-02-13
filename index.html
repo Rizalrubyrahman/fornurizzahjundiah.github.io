@@ -483,23 +483,46 @@
                 <div class="modal-content">
 
                     <div class="modal-body">
-                        Dari Rizal
-                        <br>
-                        <br>
-                        <span style="font-size: 12pt;">Di hari valentine ini aku inginn ngucapinn kalauu aku sayangg dan
-                            cintaa
-                            banget sama kamu , setiap saat aku selalu bahagia karena adanya kamu dihidup aku, aku bener"
-                            bersyukur kamu hadir di dalam hidupku, aku berharap suatu saat nanti kamu menjadi istriku,
-                            cuma kamu wanita terbaik yang pernah aku kenal, entah kenapa setiap liat muka kamu hati aku
-                            rasanya senengg banget, apa lagi disaat kamu senyumm, tolongg kamu jangann pernah pergi yaa
-                            dari hidup aku, tetepp jadi izzah yangg aku kenall yang suka bt tiba", yang suka bawell,
-                            yang selalu perhatian jangan pernah berubah yaa, aku berharap setiap ada masalah kita harus
-                            sama" buat nyelesainnya, jangan sampe kalah sama ego yang sesaat, sampe kapanpun aku bakal
-                            selau sayangg sama kamu cinta sama kamu,jangann pernah berpikir kalau aku bakal ninggalin
-                            kamu, karena itu sesuatu hal yang gabakal aku lakuin,aku bakal selalu ada buat kamu, selalu
-                            perjuangin kamu selamanya, mungkin cuma ini yang bisa aku ungkapin, I LOVE YOU CANTIKKKK
+                        <div style="margin: auto;" id="pass">
+                            Untuk mengakses isi surat harap masukan tanggal jadian terlebih dahulu
+                            <br><br>
+                            <input class="form-control" type="date" name="" id="dtdate">
+                            <br>
+                            <button type="button" id="btnlove" class="btn btn-primary">Masuk</button>
+                        </div>
+                        <div style="display: none;" id="isisurat">
+                            Dari Rizal
+                            <br>
+                            <br>
+                            <span style="font-size: 12pt;">Di hari valentine ini aku inginn ngucapinn kalauu aku sayangg
+                                dan
+                                cintaa
+                                banget sama kamu , setiap saat aku selalu bahagia karena adanya kamu dihidup aku, aku
+                                bener"
+                                bersyukur kamu hadir di dalam hidupku, aku berharap suatu saat nanti kamu menjadi
+                                istriku,
+                                cuma kamu wanita terbaik yang pernah aku kenal, entah kenapa setiap liat muka kamu hati
+                                aku
+                                rasanya senengg banget, apa lagi disaat kamu senyumm, tolongg kamu jangann pernah pergi
+                                yaa
+                                dari hidup aku, tetepp jadi izzah yangg aku kenall yang suka bt tiba", yang suka bawell,
+                                yang selalu perhatian jangan pernah berubah yaa, aku berharap setiap ada masalah kita
+                                harus
+                                sama" buat nyelesainnya, jangan sampe kalah sama ego yang sesaat, sampe kapanpun aku
+                                bakal
+                                selau sayangg sama kamu cinta sama kamu,jangann pernah berpikir kalau aku bakal
+                                ninggalin
+                                kamu, karena itu sesuatu hal yang gabakal aku lakuin,aku bakal selalu ada buat kamu,
+                                selalu
+                                perjuangin kamu selamanya, mungkin cuma ini yang bisa aku ungkapin, I LOVE YOU CANTIKKKK
 
-                        </span>
+                            </span>
+                            <div class="d-flex justify-content-end">
+                                <img src="boneka.png" alt="" style="width: 100px;">
+
+                            </div>
+                        </div>
+
                     </div>
 
                 </div>
@@ -508,11 +531,19 @@
     </div>
     <div style="height: 200px;"></div>
     <script>
+
         document.getElementById("btnlove").addEventListener("click", function (e) {
-            var sectionbg = document.getElementById("sectionbg");
-            var sectionmemories = document.getElementById("sectionmemories");
-            sectionbg.style.display = "none"
-            sectionmemories.style.display = "block"
+            var dtdate = document.getElementById("dtdate");
+            console.log(dtdate.value)
+            if (dtdate.value == "2018-07-23") {
+                var pass = document.getElementById("pass");
+                pass.style.display = "none"
+                var isisurat = document.getElementById("isisurat");
+                isisurat.style.display = "block"
+            } else {
+                alert("Yahhhh password salah coba tanya rizal")
+            }
+
         });
 
         function clickedlove() {
