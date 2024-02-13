@@ -7,7 +7,6 @@
         background-size: contain;
         background-repeat: no-repeat;
         overflow-x: hidden;
-        overflow-y: hidden;
 
         @media (min-width:100vh) {
             width: 40%;
@@ -16,10 +15,34 @@
             background-repeat: no-repeat;
             overflow-x: hidden;
             overflow-y: hidden;
+
+
+
         }
 
 
     }
+
+    #sectionmemories {
+        width: 100%;
+        padding-bottom: 200px;
+        overflow-x: hidden;
+
+        @media (min-width:100vh) {
+            width: 40%;
+            margin: auto;
+
+            overflow-x: hidden;
+            overflow-y: hidden;
+
+
+
+        }
+
+
+    }
+
+
 
 
     @font-face {
@@ -79,7 +102,6 @@
         position: fixed;
         right: 0;
         top: 0;
-        z-index: 2;
     }
 
     /* KEYFRAMES */
@@ -301,6 +323,32 @@
         width: 50px;
         height: 50px;
     }
+
+    #frontarrow {
+        width: 100px;
+        transform: scaleX(-1);
+        transform: rotate(-146deg);
+        margin-top: -100px;
+        margin-left: 300px;
+
+        @media (min-width:100vh) {
+            margin-left: 335px;
+
+        }
+    }
+
+    #backarrow {
+        width: 100px;
+        transform: scaleX(-1);
+        transform: rotate(-146deg);
+        margin-top: -160px;
+        margin-left: 40px;
+
+        @media (min-width:100vh) {
+            margin-left: 75px;
+
+        }
+    }
 </style>
 
 <head>
@@ -309,10 +357,15 @@
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-</head>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 
 <body>
-    <div id="sectionbg" style="background-image: url('bg.jpg');">
+    <div id="sectionbg" style="background-image: url('bg.png'); ">
         <div id="background-wrap">
             <div class="bubble x1"><img class="love" src="love-png-30869.png" alt="" srcset=""></div>
             <div class="bubble x2"><img class="love" src="love-png-30869.png" alt="" srcset=""></div>
@@ -334,11 +387,141 @@
         <span id="textDay">
             Days
         </span>
-    </div>
+        <img src="pngegg_prev_ui (1).png" id="frontarrow" srcset="">
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+        <img src="pngegg_prev_ui (2).png" id="backarrow" srcset="">
+
+    </div>
+    <!-- Button trigger modal -->
+
+
+    <div id="sectionmemories" style="margin-top: -600px; ">
+        <div>
+            <h1 style="text-align: center;margin-top: 400px;font-family: Pacifico;color: #d42232;font-size: 60px;">Album
+            </h1>
+        </div>
+        <div>
+            <div style="width: 30px;height: 30px;background-color: 
+#fb7278;margin: auto;border-radius: 50%; margin-top: 100px;">
+                <h1 style="margin-left: 40px;margin-top: -13px;position: absolute;">2023</h1>
+                <img src="23.jpg" alt=""
+                    style="width: 30%;height: 225px;  margin-left: 40px;margin-top: 40px; position: absolute;">
+
+            </div>
+            <div style="width: 350px;height: 2px;background-color: 
+#fb7278;margin: auto;transform: rotate(90deg);margin-top: 170px;">
+
+            </div>
+        </div>
+        <div>
+            <div style="width: 30px;height: 30px;background-color: 
+#fb7278;margin: auto;border-radius: 50%; margin-top: 70px;">
+                <h1 style="margin-left: -75px;margin-top: -13px;position: absolute;">2022</h1>
+                <img src="22.jpg" alt="" style="width: 30%;  margin-left: -140px;margin-top: 40px; position: absolute;">
+
+            </div>
+            <div style="width: 350px;height: 2px;background-color: 
+#fb7278;margin: auto;transform: rotate(90deg);margin-top: 170px;">
+            </div>
+        </div>
+        <div>
+            <div style="width: 30px;height: 30px;background-color: 
+#fb7278;margin: auto;border-radius: 50%; margin-top: 70px;">
+                <h1 style="margin-left: 40px;margin-top: -13px;position: absolute;">2021</h1>
+                <img src="21.jpg" alt="" style="width: 30%;  margin-left: 40px;margin-top: 40px; position: absolute;">
+
+            </div>
+            <div style="width: 350px;height: 2px;background-color: 
+#fb7278;margin: auto;transform: rotate(90deg);margin-top: 170px;">
+            </div>
+        </div>
+        <div>
+            <div style="width: 30px;height: 30px;background-color: 
+#fb7278;margin: auto;border-radius: 50%; margin-top: 70px;">
+                <h1 style="margin-left: -75px;margin-top: -13px;position: absolute;">2020</h1>
+                <img src="20.jpg" alt="" style="width: 30%;  margin-left: -140px;margin-top: 40px; position: absolute;">
+            </div>
+            <div style="width: 350px;height: 2px;background-color: 
+#fb7278;margin: auto;transform: rotate(90deg);margin-top: 170px;">
+            </div>
+        </div>
+        <div>
+            <div style="width: 30px;height: 30px;background-color: 
+#fb7278;margin: auto;border-radius: 50%; margin-top: 70px;">
+                <h1 style="margin-left: 40px;margin-top: -13px;position: absolute;">2019</h1>
+                <img src="19.jpg" alt="" style="width: 30%;  margin-left: 40px;margin-top: 40px; position: absolute;">
+            </div>
+            <div style="width:350px;height: 2px;background-color: 
+#fb7278;margin: auto;transform: rotate(90deg);margin-top: 170px;">
+            </div>
+        </div>
+        <div>
+            <div style="width: 30px;height: 30px;background-color: 
+#fb7278;margin: auto;border-radius: 50%; margin-top: 70px;">
+                <h1 style="margin-left: -75px;margin-top: -13px;position: absolute;">2018</h1>
+                <img src="18.jpg" alt="" style="width: 30%;  margin-left: -140px;margin-top: 40px; position: absolute;">
+
+            </div>
+            <div style="width: 350px;height: 2px;background-color: 
+#fb7278;margin: auto;transform: rotate(90deg);margin-top: 60px;">
+            </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <button type="button" class="btn  " data-bs-toggle="modal" data-bs-target="#exampleModal"
+                style="position: absolute; margin-top: 160px;  ">
+                <img src="OO6PT70.jpg" alt="" style="width: 80px;">
+
+            </button>
+
+
+        </div>
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-body">
+                        Dari Rizal
+                        <br>
+                        <br>
+                        <span style="font-size: 12pt;">Di hari valentine ini aku inginn ngucapinn kalauu aku sayangg dan
+                            cintaa
+                            banget sama kamu , setiap saat aku selalu bahagia karena adanya kamu dihidup aku, aku bener"
+                            bersyukur kamu hadir di dalam hidupku, aku berharap suatu saat nanti kamu menjadi istriku,
+                            cuma kamu wanita terbaik yang pernah aku kenal, entah kenapa setiap liat muka kamu hati aku
+                            rasanya senengg banget, apa lagi disaat kamu senyumm, tolongg kamu jangann pernah pergi yaa
+                            dari hidup aku, tetepp jadi izzah yangg aku kenall yang suka bt tiba", yang suka bawell,
+                            yang selalu perhatian jangan pernah berubah yaa, aku berharap setiap ada masalah kita harus
+                            sama" buat nyelesainnya, jangan sampe kalah sama ego yang sesaat, sampe kapanpun aku bakal
+                            selau sayangg sama kamu cinta sama kamu,jangann pernah berpikir kalau aku bakal ninggalin
+                            kamu, karena itu sesuatu hal yang gabakal aku lakuin,aku bakal selalu ada buat kamu, selalu
+                            perjuangin kamu selamanya, mungkin cuma ini yang bisa aku ungkapin, I LOVE YOU CANTIKKKK
+
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="height: 200px;"></div>
+    <script>
+        document.getElementById("btnlove").addEventListener("click", function (e) {
+            var sectionbg = document.getElementById("sectionbg");
+            var sectionmemories = document.getElementById("sectionmemories");
+            sectionbg.style.display = "none"
+            sectionmemories.style.display = "block"
+        });
+
+        function clickedlove() {
+
+        }
+
+
+    </script>
 </body>
+
 
 </html>
